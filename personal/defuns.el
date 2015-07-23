@@ -10,15 +10,8 @@
       (package-install package))
     (personal package))
 
-
-
-
-
-;; elpa managed
-;; ------------------
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-(package-initialize)
-(when (not package-archive-contents) (package-refresh-contents))
-
+;; Arrows are common, especially in ruby
+(defun insert-arrow ()
+  (interactive)
+  (delete-horizontal-space)
+  (insert " => "))
